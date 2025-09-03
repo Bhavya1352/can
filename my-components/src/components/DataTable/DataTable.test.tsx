@@ -15,8 +15,8 @@ const mockData: MockData[] = [
 ];
 
 const mockColumns = [
-  { key: 'name', title: 'Name', dataIndex: 'name', sortable: true },
-  { key: 'age', title: 'Age', dataIndex: 'age' },
+  { key: 'name', title: 'Name', dataIndex: 'name' as keyof MockData, sortable: true },
+  { key: 'age', title: 'Age', dataIndex: 'age' as keyof MockData },
 ];
 
 describe('DataTable', () => {
