@@ -23,7 +23,7 @@ const columns = [
   { key: 'status', title: 'Status', dataIndex: 'status' as keyof SampleData },
 ];
 
-const meta: Meta<typeof DataTable> = {
+const meta: Meta<typeof DataTable<SampleData>> = {
   title: 'Components/DataTable',
   component: DataTable,
   parameters: {
@@ -36,7 +36,7 @@ const meta: Meta<typeof DataTable> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof DataTable>;
+type Story = StoryObj<typeof DataTable<SampleData>>;
 
 export const Default: Story = {
   args: {

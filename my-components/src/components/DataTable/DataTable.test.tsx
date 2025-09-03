@@ -1,4 +1,3 @@
-
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import DataTable from './DataTable';
@@ -41,7 +40,6 @@ describe('DataTable', () => {
     const nameHeader = screen.getByText('Name');
     fireEvent.click(nameHeader);
     const rows = screen.getAllByRole('row');
-    // The first row is the header, so we check the second row
     expect(rows[1].children[0].textContent).toBe('Jane Doe');
   });
 
